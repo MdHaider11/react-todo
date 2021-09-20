@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: 'Josefin Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo--bg {
+	background: rgb(166, 0, 255);
+	background: linear-gradient(
+		122deg,
+		rgba(166, 0, 255, 1) 0%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo--content--box {
+	width: 380px;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo--form {
+	display: flex;
+	gap: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo--form input[type='text'] {
+	height: 35px;
+	width: 80%;
+	border: none;
+	border: 1px solid rgb(166, 0, 255);
+	border-radius: 4px;
+	padding: 0 10px;
+}
+
+.todo--form input[type='text']:focus {
+	outline: none;
+	border-color: rgb(0, 212, 255);
+}
+
+.todo--form input[type='submit'] {
+	width: 20%;
+	border: none;
+	border: 1px solid rgb(0, 212, 255);
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: rgb(0, 212, 255);
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.todo--form input[type='submit']:hover {
+	background-color: rgb(166, 0, 255);
+	border-color: rgb(166, 0, 255);
+}
+
+.todo--content--box h2 {
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(166, 0, 255);
+	padding-bottom: 16px;
+}
+
+.todo--content--box ul {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.todo--content--box ul li {
+	background: rgb(166, 0, 255);
+	background: linear-gradient(
+		122deg,
+		rgba(166, 0, 255, 1) 0%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	padding: 14px;
+	border-radius: 4px;
+}
+
+.todo--content--box ul li h4 {
+	font-size: 16px;
+	color: #fff;
+	font-weight: 400;
+}
+
+.todo--content--box ul li button {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.todo--content--box ul li button:last-of-type {
+	margin-left: 10px;
+}
+
+/* main class */
+
+.df {
+	display: flex;
+}
+
+.jcb {
+	justify-content: space-between;
+}
+
+.aic {
+	align-items: center;
 }
